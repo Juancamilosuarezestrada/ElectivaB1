@@ -251,6 +251,6 @@
 
 
 <?php include ("layouts/footer.php") ?>
-
+<script src="js/grid.js"></script>
 </body>
 </html>
