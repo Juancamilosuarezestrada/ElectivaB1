@@ -1,55 +1,62 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Untitled</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="layouts/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Agri-Col-Store</title>
+    <link rel="icon" href="img/transparent-leaf-green-logo-plant-5de509e24fe954.7285757515752913623273.png">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="footer-clean">
-        <footer>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
-                        </ul>
+    
+    <footer class="footer-area">
+        <div class="main-footer-area section-padding-100-0">
+            <div class="container" style="margin-left: 30%;">
+                <div class="row">
+                    <!-- Footer Widget Area -->
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-widget mb-100">
+                            <div class="widget-title">
+                                <a href="#"><img src="img/LOGO AGR.png" alt=""></a>
+                            </div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique aperiam autem saepe nostrum corporis voluptates deserunt, error cum harum vero porro officiis aut iusto ab pariatur repellendus beatae quod. Et.</p>
+                            <div class="footer-social-info">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                <a href="#"><i class="fa fa-behance"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>About</h3>
-                        <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Legacy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Careers</h3>
-                        <ul>
-                            <li><a href="#">Job openings</a></li>
-                            <li><a href="#">Employee success</a></li>
-                            <li><a href="#">Benefits</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
-                        <p class="copyright">Company Name © 2018</p>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="footer-widget mb-100">
+                            <div class="widget-title">
+                                <h6>Contacto</h6>
+                            </div>
+                            <div class="single-contact d-flex mb-30">
+                                <i class="icon-placeholder"></i>
+                                <p>Cr 67 #3 45B sur</p>
+                            </div>
+                            <div class="single-contact d-flex mb-30">
+                                <i class="icon-telephone-1"></i>
+                                <p>Fijo: 345 6788 <br>Oficina: 312 345 6789</p>
+                            </div>
+                            <div class="single-contact d-flex">
+                                <i class="icon-contract"></i>
+                                <p>Agri@agricolstore.co</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        </div>
+    </footer>
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
 </body>
-
 </html>
-
-<!-- Credit to https://epicbootstrap.com/snippets/footer-with-columns -->

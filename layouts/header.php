@@ -2,47 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agri-Col-Store</title>
+    <link rel="icon" href="img/transparent-leaf-green-logo-plant-5de509e24fe954.7285757515752913623273.png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container-fluid">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarExample01"
-        aria-controls="navbarExample01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarExample01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-      </div>
+    <div id="preloader">
+        <i class="circle-preloader"></i>
     </div>
-  </nav>
-  <!-- Navbar -->
-
-  
-</header>
+    <header class="header-area">
+        <div class="top-header">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="header-content h-100 d-flex align-items-center justify-content-between">
+                            <div class="academy-logo">
+                                <a href="index.php"><img src="img/LOGO AGR.png" alt="" style="width: 210px; height: 80px; margin-bottom: 10px;"></a>
+                            </div>
+                            <div class="login-content">
+                                <a href="login.php">Login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="academy-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <nav class="classy-navbar justify-content-between" id="academyNav">
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+                        <div class="classy-menu">
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.php">Inicio</a></li>
+                                    <li><a href="nosotros.php">Nosotros</a></li>
+                                    <li><a href="menu.php">Menu</a>
+                                        <!--<div class="megamenu">
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="#">#</a></li>
+                                                <li><a href="#"># &amp; #</a></li>
+                                                <li><a href="#">#</a></li>
+                                                <li><a href="#">#</a></li>
+                                                <li><a href="#">#</a></li>
+                                            </ul>
+                                            <ul class="single-mega cn-col-4">
+                                                <li><a href="#">#</a></li>
+                                                <li><a href="#"># &amp;#</a></li>
+                                                <li><a href="#">#</a></li>
+                                                <li><a href="#">#</a></li>
+                                                <li><a href="#">#</a></li>
+                                            </ul>
+                                        </div>-->
+                                    </li>
+                                    <li><a href="contacto.php">Reservas</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="calling-info">
+                            <div class="call-center">
+                                <a href="tel:+573196025938"><i class="icon-telephone-2"></i> <span>(+57) 319 602 5938</span></a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="js/bootstrap/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/plugins.js"></script>
+    <script src="js/active.js"></script>
 </body>
 </html>
