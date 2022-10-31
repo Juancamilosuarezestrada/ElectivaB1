@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Agri-Col-Store</title>
+    <title>Calibrasas</title>
     <link rel="icon" href="img/transparent-leaf-green-logo-plant-5de509e24fe954.7285757515752913623273.png">
     <link rel="stylesheet" href="style.css">
 </head>

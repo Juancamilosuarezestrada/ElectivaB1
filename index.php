@@ -16,7 +16,7 @@
                         <div class="col-12">
                             <div class="hero-slides-content">
                                 <h4 data-animation="fadeInUp" data-delay="100ms">Aqui encontraras lo que necesitas</h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms">Bienvenido a<br>Agri-Col-Store</h2>
+                                <h2 data-animation="fadeInUp" data-delay="400ms">Bienvenido a<br>Calibrasas</h2>
                                 <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer Mas</a>
                             </div>
                         </div>
@@ -29,7 +29,7 @@
                         <div class="col-12">
                             <div class="hero-slides-content">
                                 <h4 data-animation="fadeInUp" data-delay="100ms">Aqui encontraras lo que nesecitas</h4>
-                                <h2 data-animation="fadeInUp" data-delay="400ms">Bienvenido a<br>Agri-Col-Store</h2>
+                                <h2 data-animation="fadeInUp" data-delay="400ms">Bienvenido a<br>Calibrasas</h2>
                                 <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer Mas</a>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                             <div class="col-12 col-md-4">
                                 <div class="single-top-features d-flex align-items-center justify-content-center">
                                     <i class="icon-assistance"></i>
-                                    <h5>Ayudamos a los agricultores</h5>
+                                    <h5>Ayudamos</h5>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4">
@@ -230,7 +230,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="cta-content d-flex align-items-center justify-content-between flex-wrap">
-                        <h3>Quieres tambien ser parte de Agri-Col-Store?, contactanos</h3>
+                        <h3>Quieres tambien ser parte de Calibrasas?, contactanos</h3>
                         <a href="#" class="btn academy-btn">Leer mas</a>
                     </div>
                 </div>
