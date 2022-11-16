@@ -39,7 +39,7 @@
    <!-- Content Row -->
    <div class="row">
      <div class="col-lg-6 m-auto">
-       <form action="" method="post" autocomplete="off">
+       <form action="" method="post" autocomplete="off" enctype="multipart/form-data">
          <?php echo isset($alert) ? $alert : ''; ?>
          <div class="form-group">
            <label>Proveedor</label>
@@ -73,6 +73,10 @@
            <label for="cantidad">Cantidad</label>
            <input type="number" placeholder="Ingrese cantidad" class="form-control" name="cantidad" id="cantidad">
          </div>
+         <div class="form-group">
+          <label for="formFile">Imagen</label>
+          <input type="file" class="form-control" id="image" name="image" >
+          </div>
          <input type="submit" value="Guardar Producto" class="btn btn-primary">
        </form>
      </div>

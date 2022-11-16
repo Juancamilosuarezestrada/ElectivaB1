@@ -20,7 +20,7 @@
                             <div class="widget-title">
                                 <a href="#"><img src="img/LOGO AGR.png" alt=""></a>
                             </div>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique aperiam autem saepe nostrum corporis voluptates deserunt, error cum harum vero porro officiis aut iusto ab pariatur repellendus beatae quod. Et.</p>
+                            <p></p>
                             <div class="footer-social-info">
                                 <a href="#"><i class="fa fa-facebook"></i></a>
                                 <a href="#"><i class="fa fa-twitter"></i></a>
@@ -45,7 +45,7 @@
                             </div>
                             <div class="single-contact d-flex">
                                 <i class="icon-contract"></i>
-                                <p>Agri@agricolstore.co</p>
+                                <p>calibrasas@gmail.com</p>
                             </div>
                         </div>
                     </div>
