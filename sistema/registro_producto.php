@@ -2,7 +2,7 @@
   include "../conexion.php";
   if (!empty($_POST)) {
     $alert = "";
-    if (empty($_POST['proveedor']) || empty($_POST['producto']) || empty($_POST['precio']) || $_POST['precio'] <  0 || empty($_POST['cantidad'] || $_POST['cantidad'] <  0)) {
+    if (empty($_POST['proveedor']) || empty($_POST['producto']) || empty($_POST['precio']) || $_POST['precio'] <  0 || empty($_POST['cantidad'] || $_POST['cantidad'] <  0 )) {
       $alert = '<div class="alert alert-danger" role="alert">
                 Todo los campos son obligatorios
               </div>';
@@ -12,8 +12,14 @@
       $precio = $_POST['precio'];
       $cantidad = $_POST['cantidad'];
       $usuario_id = $_SESSION['idUser'];
+      $uploads_dir = '../img';
+      $tmp_name = $_FILES["foto"]["tmp_name"];
+      $name = $_FILES["foto"]["name"];
+      move_uploaded_file($tmp_name, "$uploads_dir/$name");
 
-      $query_insert = mysqli_query($conexion, "INSERT INTO producto(proveedor,descripcion,precio,existencia,usuario_id) values ('$proveedor', '$producto', '$precio', '$cantidad','$usuario_id')");
+          
+
+      $query_insert = mysqli_query($conexion, "INSERT INTO producto(proveedor,descripcion,precio,existencia,usuario_id,img) values ('$proveedor', '$producto', '$precio', '$cantidad','$usuario_id','$name')");
       if ($query_insert) {
         $alert = '<div class="alert alert-primary" role="alert">
                 Producto Registrado
@@ -62,7 +68,7 @@
            </select>
          </div>
          <div class="form-group">
-           <label for="producto">Producto</label>
+           <label for="producto">Descripcion Producto</label>
            <input type="text" placeholder="Ingrese nombre del producto" name="producto" id="producto" class="form-control">
          </div>
          <div class="form-group">
@@ -75,7 +81,7 @@
          </div>
          <div class="form-group">
           <label for="formFile">Imagen</label>
-          <input type="file" class="form-control" id="image" name="image" >
+          <input required class="form-control" id="foto" name="foto" type="file" />
           </div>
          <input type="submit" value="Guardar Producto" class="btn btn-primary">
        </form>

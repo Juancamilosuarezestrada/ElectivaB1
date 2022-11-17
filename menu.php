@@ -21,7 +21,7 @@ if ($result > 0) {
 while ($data = mysqli_fetch_assoc($query)) { ?>
 <div class="card">
   <div class="card__image-holder">
-    <img class="card__image" src="https://source.unsplash.com/300x225/?wave" alt="wave" />
+    <img class="card__image" src="img/<?php echo $data['img']; ?>" alt="wave" />
   </div>
   <div class="card-title">
     <a href="#" class="toggle-info btn">
