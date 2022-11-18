@@ -8,12 +8,9 @@ if (!isset($_REQUEST['id'])) {
 
 <head>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <title>Orden Completado - PHP Carrito de Compras</title>
+  <title>Orden Completado</title>
   <meta charset="utf-8">
   <style>
-    .container {
-      padding: 20px;
-    }
 
     p {
       color: #34a853;

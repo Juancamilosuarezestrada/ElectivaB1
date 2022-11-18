@@ -65,7 +65,7 @@
                                             </ul>
                                         </div>-->
                                     </li>
-                                    <li><a href="contacto.php">Reservas</a></li>
+                                    <li><a href="reserva.php">Reservas</a></li>
                                     <li style="font-size: 15px;"><a href="Vercarta.php"><span class="icon icon-shopping_cart"></span></a></li>
                                 </ul>
                             </div>
