@@ -1,56 +1,84 @@
 <?php
-include "conexion.php";
-$query = mysqli_query($conexion, "SELECT * FROM producto");
-$result = mysqli_num_rows($query);
+include 'Configuracion.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/grid.css">
+    <title>Carrito de Compras</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .container {
+            padding: 20px;
+        }
+
+        .cart-link {
+            width: 100%;
+            text-align: right;
+            display: block;
+            font-size: 22px;
+        }
+    </style>
 </head>
-<body>
 <?php include ("layouts/header.php") ?>
+<body>
 
-<div class="cards">
-<?php 
-if ($result > 0) {
-while ($data = mysqli_fetch_assoc($query)) { ?>
-<div class="card">
-  <div class="card__image-holder">
-    <img class="card__image" src="img/<?php echo $data['img']; ?>" alt="wave" />
-  </div>
-  <div class="card-title">
-    <a href="#" class="toggle-info btn">
-      <span class="left"></span>
-      <span class="right"></span>
-    </a>
-    <h2>
-    <?php echo $data['descripcion']; ?>
-        <small><?php echo $data['descripcion']; ?></small>
-    </h2>
-  </div>
-  <div class="card-flap flap1">
-    <div class="card-description">
-    <?php echo $data['descripcion']; ?>
+
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+
+                <ul class="nav nav-pills">
+                    <li role="presentation" class="active"><a href="index.php">Inicio</a></li>
+                    <li role="presentation"><a href="VerCarta.php">Carrito de Compras</a></li>
+                    <li role="presentation"><a href="Pagos.php">Pagar</a></li>
+                </ul>
+            </div>
+
+            <div class="panel-body">
+                <h1>Tienda de Productos</h1>
+                <a href="VerCarta.php" class="cart-link" title="Ver Carta"><i class="glyphicon glyphicon-shopping-cart"></i></a>
+                <div id="products" class="row">
+                    <?php
+                    //get rows query
+                    $query = $db->query("SELECT * FROM producto ");
+                    if ($query->num_rows > 0) {
+                        while ($row = $query->fetch_assoc()) {
+                    ?>
+                            <div class="item col-lg-4">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                    <div class="card__image-holder">
+                                                <img class="card__image" src="img/<?php echo $row['img']; ?>" alt="wave" />
+                                            </div>
+                                        <h4 class="list-group-item-heading"><?php echo $row["descripcion"]; ?></h4>
+                                        <p class="list-group-item-text"><?php echo $row["descripcion"]; ?></p>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <p class="lead"><?php echo '$' . $row["precio"] . ' COP'; ?></p>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="btn btn-success" href="AccionCarta.php?action=addToCart&id=<?php echo $row["codproducto"]; ?>">Enviar al Carrito</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php }
+                    } else { ?>
+                        <p>Producto(s) no existe.....</p>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+        <!--Panek cierra-->
+
     </div>
-    <div class="card-flap flap2">
-      <div class="card-actions">$ <?php echo $data['precio']; ?>
-        <a href="#" class="btn">Agregar al carrito</a>
-      </div>
-    </div>
-  </div>
-</div><?php }}?>
+    <?php include ("layouts/footer.php") ?>
 
-
-</div>
-
-
-
-<?php include ("layouts/footer.php") ?>
-<script src="js/grid.js"></script>
 </body>
+
 </html>

@@ -7,6 +7,8 @@
     <title>Calibrasas</title>
     <link rel="icon" href="img/restaurant.png">
     <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="fonts/icomoon/style.css">
+
 </head>
 <body>
     <div id="preloader">
@@ -23,6 +25,7 @@
                             </div>
                             <div class="login-content">
                                 <a href="login.php">Login</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -63,6 +66,7 @@
                                         </div>-->
                                     </li>
                                     <li><a href="contacto.php">Reservas</a></li>
+                                    <li style="font-size: 15px;"><a href="Vercarta.php"><span class="icon icon-shopping_cart"></span></a></li>
                                 </ul>
                             </div>
                         </div>
