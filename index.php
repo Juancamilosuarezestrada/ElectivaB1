@@ -17,7 +17,6 @@
                             <div class="hero-slides-content">
                                 <h4 data-animation="fadeInUp" data-delay="100ms">Aqui encontraras lo que necesitas</h4>
                                 <h2 data-animation="fadeInUp" data-delay="400ms">Bienvenido a<br>Calibrasas</h2>
-                                <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer Mas</a>
                             </div>
                         </div>
                     </div>
@@ -30,7 +29,6 @@
                             <div class="hero-slides-content">
                                 <h4 data-animation="fadeInUp" data-delay="100ms">Aqui encontraras lo que nesecitas</h4>
                                 <h2 data-animation="fadeInUp" data-delay="400ms">Bienvenido a<br>Calibrasas</h2>
-                                <a href="#" class="btn academy-btn" data-animation="fadeInUp" data-delay="700ms">Leer Mas</a>
                             </div>
                         </div>
                     </div>
