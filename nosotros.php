@@ -24,18 +24,19 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="400ms">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, perferendis laudantium deleniti pariatur dolorem suscipit accusamus enim laboriosam maxime voluptatibus doloremque optio quia sed ipsum vero obcaecati illum, quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, aperiam consequuntur in voluptates dolores accusamus porro qui modi tenetur harum? Fuga sunt recusandae libero possimus a ullam harum dicta consequuntur!</p>
+                    <p>Si eres fresco, alegre, respetuoso, transparente y disfrutas lo que haces, éste es tu lugar. Requerimos auxiliares de restaurantes, domiciliarios, cajeros y administradores. Envíanos tu hoja de vida según tu ubicación de preferencia laboral: Corozal, Sincelejo, Betulia u OTROS en sucre</p>
                 </div>
                 <div class="col-12 col-md-6 wow fadeInUp" data-wow-delay="500ms">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos alias, ea iste, consequuntur a, minus quos sed adipisci eligendi excepturi quis at quibusdam corporis eius! Hic natus ullam reiciendis similique. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur voluptatibus numquam expedita? Eos, laudantium aperiam, similique quas nobis delectus vero libero distinctio iste eligendi quo non, reiciendis dicta quibusdam qui!</p>
+                    <p>El Fondo de Empleados de cali brasas es una alternativa eficiente, oportuna y posible, para valorar los proyectos y enriquecer o mejorar el estilo de vida. Al vincularse con nosotros se obtiene una serie de posibilidades reales para lograr todo aquello que ha soñado para usted y los suyos. El Fondo de Empleados de cali brasas es una empresa del Sector Solidario creada por los Empleados de cali brasas, y a la cual se pueden vincular todos los trabajadores del Grupo Empresarial, cuyo objetivo principal es fomentar la cultura del Ahorro y apoyar el otorgamiento de créditos con miras a mejorar la calidad de vida de todos sus asociados, garantizando la solidez y el respaldo de sus ahorros y aportes sociales, de tal forma que seamos un Fondo de Empleados a Nivel Nacional que propenda por el bienestar general de todos sus asociados</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <div class="about-slides owl-carousel mt-100 wow fadeInUp" data-wow-delay="600ms">
-                        <img src="https://www.iberdrola.com/documents/20125/42097/Agricultura_Ecologica_746x419.jpg/b6a796ec-c86e-ae6c-9c04-ef3b180c7cdc?t=1630488152687" alt="">
-                        <img src="https://encolombia.com/wp-content/uploads/2020/03/Agricultura-Sostenible.jpg" alt="">
-                        <img src="https://www.bancomundial.org/content/dam/photos/1440x600/2017/jun/AG-Banner---10670555825_e8822e79a0_o---Copy.jpg" alt="">
+                      
+                        
+                        
+                        <img src="https://i.blogs.es/34bd70/foto-apertura/1366_2000.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -46,7 +47,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center mx-auto wow fadeInUp" data-wow-delay="300ms">
-                        <h3>Agricultores</h3>
+                        <h3>GRUPO DE TRABAJO</h3>
                     </div>
                 </div>
             </div>
@@ -55,44 +56,45 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="400ms">
                         <div class="teachers-thumbnail">
-                            <img src="https://www.bbva.com/wp-content/uploads/2021/05/agricultores-familiares-alimentos-sostenibilidad-pequenas-empresas-cuidado-agricultura-verduras-.jpg" alt="">
+                          
                         </div>
                         <div class="teachers-info mt-30">
-                            <h5>Jorge Mauricio</h5>
-                            <span>Agricultor</span>
+                            <h5>JUAN CAMILO SUAREZ </h5>
+                            <span>DESAROLLADOR</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="500ms">
                         <div class="teachers-thumbnail">
-                            <img src="https://regaber.com/wp-content/uploads/2022/03/BLOG-REGABER.jpg" alt="">
+                        
                         </div>
                         <div class="teachers-info mt-30">
-                            <h5>Daniel Gonzalez</h5>
-                            <span>Agricultor</span>
+                            <h5>SERGIO ANDRES SILGADO</h5>
+                            <span>GERENTE GENERAL</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="600ms">
                         <div class="teachers-thumbnail">
-                            <img src="https://cdn.euroinnova.edu.es/img/subidasEditor/agricultores-1605693381.webp" alt="">
+                         
                         </div>
                         <div class="teachers-info mt-30">
-                            <h5>Aura Herminda</h5>
-                            <span>Agricultora</span>
+                            <h5>ELKIN DARIO ESCOBAR </h5>
+                            <span>CORDINADOR</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-teachers-area text-center mb-100 wow fadeInUp" data-wow-delay="700ms">
                         <div class="teachers-thumbnail">
-                            <img src="https://www.larepublica.net/storage/images/2019/03/28/20190328163033.agri.x2.jpg" alt="">
+                         
                         </div>
                         <div class="teachers-info mt-30">
-                            <h5>Alexander Rodriguez</h5>
-                            <span>Agricultor</span>
+                            <h5>FRANKLIN </h5>
+                            <span>AYUDANTE
+                            </span>
                         </div>
                     </div>
                 </div>
