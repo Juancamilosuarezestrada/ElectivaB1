@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2022 a las 23:05:09
--- Versión del servidor: 10.4.21-MariaDB
--- Versión de PHP: 8.0.12
+-- Host: 127.0.0.1
+-- Generation Time: Nov 17, 2022 at 02:35 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,12 +18,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `ventas`
+-- Database: `ventas`
 --
 
 DELIMITER $$
 --
--- Procedimientos
+-- Procedures
 --
 CREATE DEFINER=`root`@`localhost` PROCEDURE `actualizar_precio_producto` (IN `n_cantidad` INT, IN `n_precio` DECIMAL(10,2), IN `codigo` INT)  BEGIN
 DECLARE nueva_existencia int;
@@ -120,7 +120,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `cliente`
+-- Table structure for table `cliente`
 --
 
 CREATE TABLE `cliente` (
@@ -135,7 +135,7 @@ CREATE TABLE `cliente` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `configuracion`
+-- Table structure for table `configuracion`
 --
 
 CREATE TABLE `configuracion` (
@@ -149,17 +149,10 @@ CREATE TABLE `configuracion` (
   `igv` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
---
--- Volcado de datos para la tabla `configuracion`
---
-
-INSERT INTO `configuracion` (`id`, `dni`, `nombre`, `razon_social`, `telefono`, `email`, `direccion`, `igv`) VALUES
-(1, 2580, 'CALI BRASAS ', 'CALI BRASAS ', 925491523, 'brasas@.gmail.com', 'Corozal - sucre\r\n', '1.18');
-
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `detallefactura`
+-- Table structure for table `detallefactura`
 --
 
 CREATE TABLE `detallefactura` (
@@ -170,18 +163,10 @@ CREATE TABLE `detallefactura` (
   `precio_venta` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
---
--- Volcado de datos para la tabla `detallefactura`
---
-
-INSERT INTO `detallefactura` (`correlativo`, `nofactura`, `codproducto`, `cantidad`, `precio_venta`) VALUES
-(1, 1, 8, 1, '4556.00'),
-(2, 2, 8, 1, '4556.00');
-
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `detalle_temp`
+-- Table structure for table `detalle_temp`
 --
 
 CREATE TABLE `detalle_temp` (
@@ -195,7 +180,7 @@ CREATE TABLE `detalle_temp` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `entradas`
+-- Table structure for table `entradas`
 --
 
 CREATE TABLE `entradas` (
@@ -210,7 +195,7 @@ CREATE TABLE `entradas` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `factura`
+-- Table structure for table `factura`
 --
 
 CREATE TABLE `factura` (
@@ -225,7 +210,7 @@ CREATE TABLE `factura` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `producto`
+-- Table structure for table `producto`
 --
 
 CREATE TABLE `producto` (
@@ -234,13 +219,33 @@ CREATE TABLE `producto` (
   `proveedor` int(11) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
   `existencia` int(11) NOT NULL,
-  `usuario_id` int(11) NOT NULL
+  `usuario_id` int(11) NOT NULL,
+  `img` varchar(200) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Dumping data for table `producto`
+--
+
+INSERT INTO `producto` (`codproducto`, `descripcion`, `proveedor`, `precio`, `existencia`, `usuario_id`, `img`) VALUES
+(38, '32', 8, '32.00', 32, 1, 'WhatsApp Image 2022-11-10 at 9.50.09 PM.jpeg');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `proveedor`
+-- Table structure for table `provedor_has_producto`
+--
+
+CREATE TABLE `provedor_has_producto` (
+  `id` int(11) NOT NULL,
+  `idprovedor` int(11) NOT NULL,
+  `idproducto` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `proveedor`
 --
 
 CREATE TABLE `proveedor` (
@@ -252,10 +257,17 @@ CREATE TABLE `proveedor` (
   `usuario_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+--
+-- Dumping data for table `proveedor`
+--
+
+INSERT INTO `proveedor` (`codproveedor`, `proveedor`, `contacto`, `telefono`, `direccion`, `usuario_id`) VALUES
+(8, 'Cocacola', '1021545', 12415121, 'sjkdanfa', 1);
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `rol`
+-- Table structure for table `rol`
 --
 
 CREATE TABLE `rol` (
@@ -264,17 +276,16 @@ CREATE TABLE `rol` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `rol`
+-- Dumping data for table `rol`
 --
 
 INSERT INTO `rol` (`idrol`, `rol`) VALUES
-(1, 'Administrador'),
-(2, 'Vendedor');
+(1, 'admin');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -287,168 +298,180 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
--- Volcado de datos para la tabla `usuario`
+-- Dumping data for table `usuario`
 --
 
 INSERT INTO `usuario` (`idusuario`, `nombre`, `correo`, `usuario`, `clave`, `rol`) VALUES
-(1, 'cali brasas', 'caibrasas@gmail.com', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1),
-(6, 'Maria Perez Miranda', 'maria@gmail.com', 'maria', '263bce650e68ab4e23f28263760b9fa5', 3);
+(1, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1),
+(2, 'admin', 'admin', 'admin', '21232f297a57a5a743894a0e4a801fc3', 1);
 
 --
--- Índices para tablas volcadas
+-- Indexes for dumped tables
 --
 
 --
--- Indices de la tabla `cliente`
+-- Indexes for table `cliente`
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`idcliente`);
 
 --
--- Indices de la tabla `configuracion`
+-- Indexes for table `configuracion`
 --
 ALTER TABLE `configuracion`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `detallefactura`
+-- Indexes for table `detallefactura`
 --
 ALTER TABLE `detallefactura`
-  ADD PRIMARY KEY (`correlativo`);
+  ADD PRIMARY KEY (`correlativo`),
+  ADD KEY `nofactura` (`nofactura`,`codproducto`);
 
 --
--- Indices de la tabla `detalle_temp`
+-- Indexes for table `detalle_temp`
 --
 ALTER TABLE `detalle_temp`
   ADD PRIMARY KEY (`correlativo`);
 
 --
--- Indices de la tabla `entradas`
+-- Indexes for table `entradas`
 --
 ALTER TABLE `entradas`
   ADD PRIMARY KEY (`correlativo`);
 
 --
--- Indices de la tabla `factura`
+-- Indexes for table `factura`
 --
 ALTER TABLE `factura`
-  ADD PRIMARY KEY (`nofactura`);
+  ADD PRIMARY KEY (`nofactura`),
+  ADD KEY `codcliente` (`codcliente`);
 
 --
--- Indices de la tabla `producto`
+-- Indexes for table `producto`
 --
 ALTER TABLE `producto`
   ADD PRIMARY KEY (`codproducto`);
 
 --
--- Indices de la tabla `proveedor`
+-- Indexes for table `provedor_has_producto`
+--
+ALTER TABLE `provedor_has_producto`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `idprovedor` (`idprovedor`,`idproducto`),
+  ADD KEY `idproducto` (`idproducto`);
+
+--
+-- Indexes for table `proveedor`
 --
 ALTER TABLE `proveedor`
   ADD PRIMARY KEY (`codproveedor`);
 
 --
--- Indices de la tabla `rol`
+-- Indexes for table `rol`
 --
 ALTER TABLE `rol`
   ADD PRIMARY KEY (`idrol`);
 
 --
--- Indices de la tabla `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`idusuario`);
+  ADD PRIMARY KEY (`idusuario`),
+  ADD KEY `rol` (`rol`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de la tabla `cliente`
+-- AUTO_INCREMENT for table `cliente`
 --
 ALTER TABLE `cliente`
   MODIFY `idcliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `configuracion`
+-- AUTO_INCREMENT for table `configuracion`
 --
 ALTER TABLE `configuracion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `detallefactura`
+-- AUTO_INCREMENT for table `detallefactura`
 --
 ALTER TABLE `detallefactura`
-  MODIFY `correlativo` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `correlativo` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `detalle_temp`
+-- AUTO_INCREMENT for table `detalle_temp`
 --
 ALTER TABLE `detalle_temp`
   MODIFY `correlativo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT de la tabla `entradas`
+-- AUTO_INCREMENT for table `entradas`
 --
 ALTER TABLE `entradas`
   MODIFY `correlativo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `factura`
+-- AUTO_INCREMENT for table `factura`
 --
 ALTER TABLE `factura`
   MODIFY `nofactura` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT de la tabla `producto`
+-- AUTO_INCREMENT for table `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `codproducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `codproducto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
--- AUTO_INCREMENT de la tabla `proveedor`
+-- AUTO_INCREMENT for table `provedor_has_producto`
+--
+ALTER TABLE `provedor_has_producto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `proveedor`
 --
 ALTER TABLE `proveedor`
-  MODIFY `codproveedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `codproveedor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT de la tabla `rol`
+-- AUTO_INCREMENT for table `rol`
 --
 ALTER TABLE `rol`
-  MODIFY `idrol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idrol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `usuario`
+-- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Restricciones para tablas volcadas
+-- Constraints for dumped tables
 --
 
 --
--- Filtros para la tabla `configuracion`
---
-ALTER TABLE `configuracion`
-  ADD CONSTRAINT `configuracion_ibfk_1` FOREIGN KEY (`id`) REFERENCES `usuario` (`idusuario`);
-
---
--- Filtros para la tabla `factura`
+-- Constraints for table `factura`
 --
 ALTER TABLE `factura`
-  ADD CONSTRAINT `factura_ibfk_1` FOREIGN KEY (`nofactura`) REFERENCES `producto` (`codproducto`);
+  ADD CONSTRAINT `factura_ibfk_1` FOREIGN KEY (`codcliente`) REFERENCES `cliente` (`idcliente`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `producto`
+-- Constraints for table `provedor_has_producto`
 --
-ALTER TABLE `producto`
-  ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`codproducto`) REFERENCES `entradas` (`correlativo`);
+ALTER TABLE `provedor_has_producto`
+  ADD CONSTRAINT `provedor_has_producto_ibfk_1` FOREIGN KEY (`idprovedor`) REFERENCES `proveedor` (`codproveedor`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `provedor_has_producto_ibfk_2` FOREIGN KEY (`idproducto`) REFERENCES `producto` (`codproducto`) ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `proveedor`
+-- Constraints for table `usuario`
 --
-ALTER TABLE `proveedor`
-  ADD CONSTRAINT `proveedor_ibfk_1` FOREIGN KEY (`codproveedor`) REFERENCES `producto` (`codproducto`);
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`rol`) REFERENCES `rol` (`idrol`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
